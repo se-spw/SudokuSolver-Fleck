@@ -103,5 +103,20 @@ namespace SudokuSolver {
       }
       return status;
     }
+
+    public override stringToString() {
+      ​​int digits = 
+      1 + (int)Math.Log10(size);StringBuilder sb =new StringBuilder();for (int i 
+      = 0; i < size; i++) {​​if (i > 0) {​​sb.AppendLine();if (i % blocks== 0) {​​for (int j 
+      = 0; j < size; j++) {​​if ((j > 
+      0) && (j % blocks 
+      == 0)) sb.Append('┼');sb.Append('─', 
+      digits + 2);}​​sb.AppendLine();}​​}​​for (int j 
+      = 0; j < size; j++) {​​if ((j > 
+      0) && (j % blocks 
+      == 0)) sb.Append('│');int n = board[i,
+      j];sb.Append($"{​​((n< 1) || (n > 
+      size) ? " " :n)}​​ ".PadLeft(digits+ 2));}​​}​​return sb.ToString();
+    }​​
   }
 }
