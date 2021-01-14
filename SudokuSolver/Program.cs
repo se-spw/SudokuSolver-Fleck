@@ -21,6 +21,7 @@ namespace SudokuSolver {
 
       bool solved = SudokuSolver.Solve(board);
       Console.WriteLine($"{(solved ? "SOLVED" : "UNSOLVABLE")}");
+      Console.WriteLine(board.ToString());
     }
   }
 }
